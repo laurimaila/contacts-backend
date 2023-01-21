@@ -1,6 +1,6 @@
 # Contacts backend
-Node.js server used for hosting phonebook contacts
+Node.js backend used for hosting phonebook contacts
 
 Assignment for part 3 of Full Stack open 2022
 
-After npm install run with nodemon  `npm run dev` 
+Both front+back deployed to <https://contacts-backend.fly.dev/>
