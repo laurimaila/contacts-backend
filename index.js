@@ -3,7 +3,7 @@ const express = require('express')
 const Person = require('./models/person')
 var morgan = require('morgan')
 const app = express()
-morgan.token('contact', function (req, res) { return JSON.stringify(req.body) })
+morgan.token('contact', function (req) { return JSON.stringify(req.body) })
 
 /* const cors = require('cors')
 app.use(cors()) */
@@ -42,7 +42,7 @@ app.post('/api/persons', (request, response, next) => {
 
 app.delete('/api/persons/:id', (request, response, next) => {
     Person.findByIdAndRemove(request.params.id)
-        .then(result => {
+        .then(() => {
             response.status(204).end()
         })
         .catch(error => next(error))
@@ -69,7 +69,7 @@ app.put('/api/persons/:id', (request, response, next) => {
         .catch(error => next(error))
 })
 
-app.get('/info', (request, response) => {
+app.get('/info', (request, response, next) => {
     Person.find({}).then(persons => {
         response.send(`<p>Phonebook has info for ${persons.length} people</p>
     <p>${new Date()}</p>`)
