@@ -8,7 +8,7 @@
     "build:ui": "rm -rf build && cd ../fullstackopen2022_lkm/osa2/puhelinluettelo/ && npm run build && cp -r build ../../../contacts-backend",
     "dev": "nodemon index.js",
     "deploy": "flyctl deploy",
-    "deploy:full": "npm run build:ui && npm run deploy",    
+    "deploy:full": "npm run build:ui && npm run deploy",
     "logs:prod": "flyctl logs"
   },
   "author": "Lauri Maila",
@@ -16,6 +16,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mongoose": "^6.8.4",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

@@ -11,14 +11,14 @@
 #build/Release
 
 # Dependency directories
-#node_modules/
-#jspm_packages/
+node_modules/
+jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
-#web_modules/
+web_modules/
 
 # Optional npm cache directory
-#.npm
+.npm
 
 # Optional eslint cache
 #.eslintcache
